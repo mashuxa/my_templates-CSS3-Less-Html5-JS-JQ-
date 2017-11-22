@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Members Area</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <link rel="stylesheet" href="../design/css/common.css"> </head>
+
+<body class="flex-grid">
+   <input class="checkbox-toggle-menu" id="checkbox-toggle-menu" type="checkbox" style="display: none">
+    <header class="header container">
+        <a class="logo" href="#"><img src="../design/images/vumingo-logo.svg" alt="vumingo"></a>
+        <nav class="nav-menu"> <a class="menu-item active" href="#">Home</a> <a class="menu-item" href="#">Products</a> <a class="menu-item" href="#">Solutions</a> <a class="menu-item" href="#">Downloads</a> <a class="menu-item" href="#">Purchase</a> <a class="menu-item" href="#">Support</a> <a class="menu-item" href="#">Company</a>
+            <ul class="login-menu">
+                <!--            <li><a class="menu-item" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> My cart</a></li>-->
+                <!--            <li><a class="menu-item sign-up" href="#"><i class="fa fa-user" aria-hidden="true"></i> Sign Up</a></li>-->
+                <li><a class="menu-item login" href="#" data-src="popup-login.html"><i class="fa fa-user" aria-hidden="true"></i> Login</a></li>
+                <li><a class="menu-item register" href="#" data-src="popup-register.html">Register FREE Account</a></li>
+            </ul>
+        </nav>
+        <label class="fa fa-bars mobile-menu-trigger" aria-hidden="true" for="checkbox-toggle-menu"></label>
+    </header>
+    <ul class="breadcrumbs container">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Members Area</a></li>
+        <li><a href="#">My Products</a></li>
+    </ul>
+    <main class="main container">
+        <article class="block-item members-area">
+            <header class="header"> <span class="user-name">Username</span>
+                <ul class="members-area-nav">
+                    <li><a class="active" href="#">My products</a><span class="txt-green"> | </span></li>
+                    <li><a href="#"><i class="fa fa-cogs" aria-hidden="true"></i> Account Settings</a><span class="txt-green"> | </span></li>
+                    <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a></li>
+                </ul>
+            </header>
+            <main class="main">
+                <h1>Member Area</h1>
+                <form action="#">
+                    <h5>Edit My Account</h5>
+                    <label>
+                        <input type="text" class="first-name" placeholder="First Name" required>
+                        <input type="text" class="last-name" placeholder="Last Name" required>
+                        <input type="text" class="company-name" placeholder="Company Name" required> </label>
+                    <label>
+                        <input type="text" class="address" placeholder="Address" required>
+                        <input type="text" class="city" placeholder="City" required> </label>
+                    <label>
+                        <input type="text" class="state" placeholder="State" required>
+                        <select name="" id="" class="country" value="Country" required>
+                            <option selected disabled>Country</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                        <input type="text" class="zip" placeholder="ZIP" required> </label>
+                    <label class="email-wrapper">
+                        <input type="email" class="email" placeholder="Email" required> </label>
+                    <h5>Change Password</h5>
+                    <label class="password-wrapper"> New password:
+                        <input type="text" class="password"> </label>
+                    <label class="password-wrapper"> Confirm new password:
+                        <input type="text" class="confirm-password"> </label>
+                    <h5>General Notifications</h5>
+                    <label>
+                        <input type="checkbox" id="mailing-list" checked> <i class="fa fa-square-o" aria-hidden="true"></i> <i class="fa fa-check-square-o" aria-hidden="true"></i> Include me in the Avanset mailing list </label>
+                    <br>
+                    <input type="submit" class="btn save-changes green" value="Save Changes"> </form>
+            </main>
+        </article>
+    </main>
+    <footer class="footer wrapper-blue">
+        <div class="container">
+            <ul class="container footer-menu">
+                <li><a class="footer-link" href="#">About Us</a></li>
+                <li><a class="footer-link" href="#">Terms & conditions</a></li>
+                <li><a class="footer-link" href="#">Privacy Policy</a></li>
+                <li><a class="footer-link" href="#">Sign In</a></li>
+                <li><a class="footer-link" href="#">Sign Up</a></li>
+                <li><a class="footer-link" href="#">Password Recovery</a></li>
+                <li><a class="footer-link" href="#">Support</a></li>
+            </ul>
+            <div class="copyright">© 2017 Vumingo.com. All rights reserved</div>
+        </div>
+    </footer>
+    <script src="../design/js/jquery-3.2.1.min.js"></script>
+    <script src="../design/js/html5shiv.min.js"></script>
+    <script src="../design/js/slick.min.js"></script>
+    <script src="../design/js/design.js"></script>
+</body>
+
+</html>

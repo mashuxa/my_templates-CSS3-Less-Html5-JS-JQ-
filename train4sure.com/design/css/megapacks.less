@@ -1,0 +1,53 @@
+ //colors
+ @color-main: #EE4D15;
+ @color-mainlight: lighten(@color-main, 45%);
+ @color-maindark: darken(@color-main, 45%);
+ @color-contrast: spin(@color-main, 180);
+ @color-contrastlight: lighten(@color-contrast, 45%);
+ @color-contrastdark: darken(@color-contrast, 35%);
+ @color-neutral: desaturate(@color-main, 100%);
+ @color-neutrallight: lighten(@color-neutral, 35%);
+ @color-neutraldark: darken(@color-neutral, 35%);
+ .sidebar .sidebar-cotnent {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+ }
+ 
+ .sidebar .sidebar-item {
+     width: 100px;
+     text-align: center;
+     transition: 0.5s;
+ }
+ 
+ .sidebar .sidebar-item:hover {
+     transform: scale(1.05);
+ }
+ 
+ .sidebar .sidebar-item .photo-wrapper {
+     background-color: white;
+     border: 0.2rem solid #05394b;
+     border-radius: 0.5rem;
+     margin: auto;
+     overflow: hidden;
+     width: 9.5rem;
+     height: 9.5rem;
+     position: relative;
+ }
+ 
+ .sidebar .sidebar-item img {
+     width: 100%;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     margin: auto;
+ }
+ 
+
+ 
+
+ 
+
+  

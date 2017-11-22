@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{if $sTitle }{$sTitle}{else}{$title}{/if}</title>
+    {if $sHttps==$sBaseUrl}<base href="{$sBaseUrl}" />{/if}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta name="description" content="{$sDescription}">
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <link rel="stylesheet" href="/design/css/fonts.css">
+    <link rel="stylesheet" href="/design/css/style.css"> 
+    <link rel="stylesheet" href="/design/css/slick.css">
+    <link rel="stylesheet" href="/design/css/slick-theme.css"> 
+    {if $sPageName=='paynow' || $sPageName=='checkout' || $sPageName=='register' || $sPageName=='forgot' || $sPageName=='downloads' || $bInPrivate}
+	<script language="JavaScript" type="text/javascript" src="/design/js/validator.js"></script>
+	{$jsValidatorMess}
+	{$sJsMessages}
+    {/if}
+     </head>
+
+<body class="flex-grid">
+    <input class="checkbox-toggle-menu" id="checkbox-toggle-menu" type="checkbox" style="display: none">
+    <header class="header container">
+        <a class="logo" href="{url link='member.public'}"><img src="/design/images/vumingo-logo.svg" alt="Vumingo"></a>
+        <nav class="nav-menu"> <a class="menu-item active" href="#">Home</a> <a class="menu-item" href="{url link='member.public.products'}">Products</a> <a class="menu-item" href="{url link='member.public.solutions'}">Solutions</a> <a class="menu-item" href="{url link='member.public.downloads'}">Downloads</a> <a class="menu-item" href="{url link='member.public.purchase'}">Purchase</a> <a class="menu-item" href="{url link='member.public.support'}">Support</a> <a class="menu-item" href="{url link='member.public.license'}">Company</a>
+            <ul class="login-menu">
+{*<li><a class="menu-item" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>My cart</a></li>*}
+                <li><a class="menu-item login" href="{url link='member.public.login'}" data-src="popup-login.html"><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
+                <li><a class="menu-item register" href="{url link='member.public.register'}" data-src="popup-register.html">Register FREE Account</a></li>
+            </ul>
+        </nav>
+        <label class="fa fa-bars mobile-menu-trigger" aria-hidden="true" for="checkbox-toggle-menu"></label>
+    </header>
+    
+    
+    
+        <!-- Start Content -->
+        {include file=$sTplName}
+        <!-- End Content -->
+    
+    
+    
+    
+    <footer class="footer wrapper-blue">
+        <div class="container">
+            <ul class="container footer-menu">
+                <li><a class="footer-link" href="{url link='member.public.company'}">About Us</a></li>
+                <li><a class="footer-link" href="{url link='member.public.terms'}">Terms & conditions</a></li>
+                <li><a class="footer-link" href="{url link='member.public.privacy'}">Privacy Policy</a></li>
+                <li><a class="footer-link" href="{url link='member.public.login'}">Sign In</a></li>
+                <li><a class="footer-link" href="{url link='member.public.register'}">Sign Up</a></li>
+                <li><a class="footer-link" href="{url link='member.public.forgot'}">Password Recovery</a></li>
+                <li><a class="footer-link" href="{url link='member.public.support'}">Support</a></li>
+            </ul>
+            <div class="copyright">&copy; 2017 Vumingo.com. All rights reserved</div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/design/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/design/js/common.js"></script>
+    <script type="text/javascript" src="/design/js/validator.js"></script>
+    <script type="text/javascript" src="/design/js/html5shiv.min.js"></script>
+    <script type="text/javascript" src="/design/js/slick.min.js"></script>
+    <script type="text/javascript" src="/design/js/design.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+// out: ../css/style.css
+////
+@color-active: #0087F7;
+@color-cotrast: #0AAB4B;
+@color-text: #333;
+@color-shadow: #B3B3B3;
+@color-bg: #F2F2F2;
+@color-white: #FFF;
+@color-not-active: @color-shadow;
+@indent: 5px;
+@line: 1px;
+//COMMON
+html {
+    font-size: 14px;
+    line-height: normal;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-family: "-apple-system", "BlinkMacSystemFont", "Arial", sans-serif;
+}
+
+.body {
+    color: @color-text;
+    background-color: @color-bg;
+    overflow-y: scroll;
+}
+
+//MEXINS
+.colors( @color-bg: @color-white, @color-text: #333) {
+    background-color: @color-bg;
+    color: @color-text;
+}
+
+//-----------------------------------------------------------
+hr {
+    border-color: transparent;
+    border-bottom-color: @color-cotrast;
+    margin: @indent 2*@indent;
+}
+
+a {
+    text-decoration: none;
+}
+
+.search input {
+    min-width: 200px;
+    padding-left: @indent;
+    padding-right: @indent;
+    height: 100%;
+    border: @line solid @color-active;
+}
+
+img {
+    max-width: 100%;
+}
+
+.logo img {
+    height: 18*@indent;
+    width: auto;
+    padding: 2*@indent;
+}
+
+.btn {
+    cursor: pointer;
+    transition-duration: 0.3s;
+    &:hover {
+        transform: scale(1.5);
+    }
+    &:active {
+        transform: scale(1);
+    }
+}
+
+.home i {transition-duration: 0.3s;}
+.home:hover i {transform: scale(1.5); }
+.home:active i {transform: scale(1); }
+ 
+
+
+.advertising {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.arrow-top {
+    .btn;
+    position: absolute;
+    right: 0;
+}
+
+.header,
+.aside,
+.post,
+.main .category.level-1 > li {
+    .colors;
+}
+
+.nav,
+.footer {
+    overflow: hidden;
+    .colors(@color-active, @color-white);
+    a {
+        color: @color-white;
+    }
+    line-height: 6*@indent;
+}
+
+.footer {
+    text-align: center;
+    .fa {
+        font-size: 6*@indent;
+    }
+}
+
+.main .category.level-1 > li {
+    box-shadow: 0 0 5px 0 @color-shadow;
+}
+
+.aside {
+    box-shadow: -5px 0 5px -5px @color-shadow, 5px 0 5px -5px @color-shadow;
+    .category.level-1 span {
+        border-bottom: @line solid @color-white;
+        .colors(@color-cotrast, @color-white);
+        &:hover {
+            filter: brightness(0.95);
+        }
+        &:before {
+            content: "\f0dd";
+            display: inline-block;
+            font-family: "FontAwesome";
+            padding: @indent 2*@indent;
+            transition-duration: 0.3s;
+        }
+        &.open:before {
+            transform: rotate(-90deg);
+        }
+    }
+    .post-links {
+        a {
+            .colors(@color-white, @color-cotrast);
+            &:hover {
+                .colors(@color-cotrast, @color-white );
+            }
+        }
+        li:not(:last-of-type) {
+            border-bottom: @line solid @color-cotrast;
+        }
+    }
+}

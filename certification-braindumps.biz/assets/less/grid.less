@@ -1,0 +1,173 @@
+// out: ../css/grid.css
+//VAR
+@width-main: 700px;
+@width-aside: 280px;
+@width-container: @width-main + @width-aside;
+@indent: 5px;
+@line: 1px;
+//COMMON STYLE OF ELEMENTS
+.grid {
+    display: grid;
+    &.body {
+        min-height: 100vh;
+    }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: @width-container;
+    margin: auto;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.flexblock-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    &.column {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+}
+
+.flexblock {
+    flex-grow: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+// INDENT
+.main .category.level-1 {
+    padding: @indent;
+    & > li {
+        flex-grow: 1;
+        margin: @indent;
+        padding: 2*@indent;
+    }
+    ul {
+        padding: 0 2*@indent;
+    }
+}
+.search {    padding-right: 10px;}
+.aside {
+    .category.level-1 {
+        padding: 2*@indent;
+        flex-direction: column;
+        span {
+            cursor: pointer;
+            display: block;
+            padding: @indent 2*@indent;
+        }
+        ul {
+            padding-left: 2*@indent;
+        }
+    }
+    .post-links {
+        a {
+            display: block;
+            padding: @indent 2*@indent;
+        }
+    }
+    .post-links {
+        display: none;
+    }
+}
+
+.fa,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding-left: 2*@indent;
+    padding-right: 2*@indent;
+}
+
+.advertising,
+.widget {
+    padding: 2*@indent 2*@indent 0;
+}
+
+.post {
+    margin: 0 2 * @indent;
+    padding: 2 * @indent;
+    height: 100%;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        padding-left: 0;
+    }
+}
+
+//GRID
+//_____________________________________________________
+@media all and (min-width: 980px) {
+    .main .category.level-1 > li {
+        @min: 134px;
+        min-width: @min;
+        max-width: 162.5px;
+        &:nth-of-type(3) {
+            min-width: @min*2+10px;
+            max-width: 335px;
+        }
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 979px) {
+    .main .category.level-1 > li {
+        @min: 109px;
+        min-width: @min;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .main .category.level-1 > li {
+        @min: 178px;
+        min-width: @min;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .grid.body {
+        grid-template-columns: auto minmax(auto, @width-aside) minmax(auto, @width-main) auto;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: "header header header header" ". aside main  ." "footer footer footer footer";
+    }
+}
+
+@media all and (max-width: 767px) {
+    .grid.body {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto) 1fr auto;
+        grid-template-areas: "header" "aside" "main" "footer";
+    }
+}

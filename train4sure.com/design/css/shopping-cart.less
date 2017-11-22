@@ -1,0 +1,18 @@
+// //colors
+ @color-main: #EE4D15; 
+ @color-neutral: desaturate(@color-main, 100%);
+ @color-neutrallight: lighten(@color-neutral, 35%);
+ @color-neutraldark: darken(@color-neutral, 35%);     
+#promotion-code {
+         margin-right: 0;
+     }
+     .btn.remove-btn {
+         color: @color-neutraldark;
+         background: @color-neutraldark;
+         background: -moz-linear-gradient(top, @color-neutrallight 0%, @color-neutral 100%);
+         background: -webkit-gradient(left top, left bottom, color-stop(0%, @color-neutral), color-stop(100%, @color-neutral));
+         background: -webkit-linear-gradient(top, @color-neutrallight 0%, @color-neutral 100%);
+         background: -o-linear-gradient(top, @color-neutrallight 0%, @color-neutral 100%);
+         background: -ms-linear-gradient(top, @color-neutrallight 0%, @color-neutral 100%);
+         background: linear-gradient(to bottom, @color-neutrallight 0%, @color-neutral 100%);
+     }
