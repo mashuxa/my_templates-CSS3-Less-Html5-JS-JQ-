@@ -114,7 +114,9 @@ body {
 .article-vendor {
     padding: 0.666rem;
 }
-
+.vendor-files {
+        flex-grow: 1;
+}
 .empty {
     height: 2rem;
 }
@@ -547,9 +549,14 @@ body {
     margin-bottom: 0.666rem;
 }
 
+.vendor-files-item p {padding: 0.333rem;}
 .vendor-files-item .btn {
+    text-decoration: none;
     display: block;
     margin: 0.666rem auto;
+}
+.vendor-files-item .btn:hover { 
+    color: white;
 }
 
 .vendor-files-item label {
