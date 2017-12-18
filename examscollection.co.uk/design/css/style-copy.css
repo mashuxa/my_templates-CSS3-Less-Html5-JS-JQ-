@@ -1,0 +1,395 @@
+@font-face {
+    font-weight: 200;
+    font-style: normal;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans/Light/OpenSans-Light.eot');
+    src: local('Open Sans Light'), local('OpenSansLight'), url('../fonts/OpenSans/Light/OpenSans-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/Light/OpenSans-Light.woff2') format('woff2'), url('../fonts/OpenSans/Light/OpenSans-Light.woff') format('woff'), url('../fonts/OpenSans/Light/OpenSans-Light.ttf') format('truetype'), url('../fonts/OpenSans/Light/OpenSans-Light.svg') format('svg');
+}
+
+@font-face {
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans/Regular/OpenSans-Regular.eot');
+    src: local('Open Sans Regular'), local('OpenSansRegular'), url('../fonts/OpenSans/Regular/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/Regular/OpenSans-Regular.woff2') format('woff2'), url('../fonts/OpenSans/Regular/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans/Regular/OpenSans-Regular.ttf') format('truetype'), url('../fonts/OpenSans/Regular/OpenSans-Regular.svg') format('svg');
+}
+
+@font-face {
+    font-weight: 600;
+    font-style: normal;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans/Semibold/OpenSans-Semibold.eot');
+    src: local('Open Sans Semibold'), local('OpenSansSemibold'), url('../fonts/OpenSans/Semibold/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/Semibold/OpenSans-Semibold.woff2') format('woff2'), url('../fonts/OpenSans/Semibold/OpenSans-Semibold.woff') format('woff'), url('../fonts/OpenSans/Semibold/OpenSans-Semibold.ttf') format('truetype'), url('../fonts/OpenSans/Semibold/OpenSans-Semibold.svg') format('svg');
+}
+
+@font-face {
+    font-weight: 800;
+    font-style: normal;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans/Bold/OpenSans-Bold.eot');
+    src: local('Open Sans Bold'), local('OpenSansBold'), url('../fonts/OpenSans/Bold/OpenSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans/Bold/OpenSans-Bold.woff2') format('woff2'), url('../fonts/OpenSans/Bold/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans/Bold/OpenSans-Bold.ttf') format('truetype'), url('../fonts/OpenSans/Bold/OpenSans-Bold.svg') format('svg');
+}
+
+@font-face {
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'SourceCodeProLight';
+    src: local('Source Code Pro Light'), local('SourceCodeProRLight'), url('../fonts/SourceCodePro-Light.ttf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'OpenSans', 'sans-serif';
+    line-height: 1.4;
+}
+
+
+/*GRID*/
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    max-width: 100%;
+    background: linear-gradient(to top left, #2b597a, #62bcde);
+    background-color: #468aac;
+}
+
+.flex-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/*for old browsers*/
+
+.inline-grid {
+    text-align: justify;
+}
+
+.inline-grid > * {
+    display: inline-block;
+}
+
+
+/*for new browsers*/
+
+.inline-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.flex-block.cntr {
+    justify-content: center;
+}
+
+.flex-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin: auto;
+    max-width: 78rem;
+    width: 100%;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+
+/*end GRID*/
+
+
+/*common styles*/
+
+h3,
+h4 {
+    margin: 0;
+    text-align: center;
+}
+
+h1,
+h2 {
+    margin: 0 0 0.5rem 0.5rem;
+    font-size: 2rem;
+    font-family: 'SourceCodeProLight';
+}
+
+article h1,
+.vendors-block h2,
+.vendor-exams h2 {
+    margin: 0 0 0.5rem 0;
+}
+
+h1:before,
+h2:before {
+    padding-right: 0.5rem;
+    content: "";
+    font-family: "FontAwesome";
+}
+
+h1:after,
+h2:after {
+    content: ":";
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+hr {
+    margin-bottom: 1rem;
+    height: 2px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 0.05rem 0.05rem 0.05rem rgba(0, 0, 0, 0.2);
+}
+
+.flt-lft {
+    float: left;
+    margin-right: 1rem;
+}
+
+.flt-rght {
+    float: right;
+    margin-left: 1rem;
+}
+
+.main img {
+    padding: 0.666rem 0.666rem;
+    max-width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.3);
+    transition-duration: 0.3s;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.333rem 0.666rem;
+    background-color: #fff;
+    box-shadow: 0 0.05rem 0.05rem 0.05rem rgba(0, 0, 0, 0.1);
+    color: #468aac;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.vendor-exams:after,
+article:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: "";
+}
+
+article {
+    padding: 0.666rem;
+}
+
+
+/*HEADER*/
+
+.header {
+    padding: 0.666rem;
+}
+
+.search-form {
+    position: relative;
+    overflow: hidden;
+}
+
+.search-form input[type="search"] {
+    outline: none;
+    padding: 0.333rem;
+    min-width: 15rem;
+    border: none;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+.search-form .btn {
+    position: absolute;
+    right: 0;
+    transform: translateX(3rem);
+}
+
+.search-form input[type="search"]:focus {
+    border-top: 1px solid #fff;
+}
+
+.search-form input[type="search"]:focus ~ .btn,
+.search-form .btn:hover {
+    outline: none;
+    transform: translateX(0px);
+}
+
+input[type="search"]::-webkit-input-placeholder {
+    color: #fff;
+}
+
+input[type="search"]::-moz-placeholder {
+    color: #fff;
+}
+
+
+/*Article Main*/
+
+.article-main p {
+    margin-top: 0;
+    text-align: justify;
+}
+
+
+/*Vendors Block*/
+
+.vendors-block {
+    padding: 0.666rem;
+}
+
+.vendors-block h2 {}
+
+.vendor-item {
+    margin: 0.666rem 0.333rem;
+    text-align: center;
+}
+
+.vendor-item:hover img {
+    box-shadow: 0 0.05rem 0.05rem 0.05rem rgba(0, 0, 0, 0.1);
+}
+
+.vendor-item:hover h3 {
+    text-decoration: underline;
+}
+
+
+/*Exams wrapper*/
+
+.vendor-exams {
+    padding: 0.666rem;
+}
+
+.exams-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.exams-wrapper .exam-name:hover,
+.exam-files li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.exams-wrapper li:before {
+    padding-right: 0.5rem;
+    content: "";
+    font-weight: 400;
+    font-family: "FontAwesome";
+}
+
+.exams-wrapper li.open:before {
+    content: "";
+}
+
+.exam-files {
+    overflow: hidden;
+    font-weight: 200;
+    transition-duration: 1s;
+}
+
+li {
+    overflow: hidden;
+}
+
+.exam-files li {
+    height: 0;
+    transition-duration: 0.3s;
+    transform: scaleY(0);
+}
+
+li.open .exam-files li {
+    height: 100%;
+    transform: scaleY(1);
+}
+
+.exam-files li:before {
+    content: "";
+}
+
+.exams-wrapper > li:nth-of-type(2n-1) {
+    float: left;
+    width: 48%;
+}
+
+.exams-wrapper > li:nth-of-type(2n) {
+    float: right;
+    width: 48%;
+}
+
+
+/*FOOTER*/
+
+.footer-links li:not(:last-of-type):after {
+    padding: 0 1rem;
+    color: #468aac;
+    content: "|";
+}
+
+.footer {
+    background-color: #fff;
+    box-shadow: 0 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.3);
+}
+
+.footer a {
+    color: #468aac;
+}
+
+@media screen and (max-width: 767px) {
+    .inline-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .header {
+        flex-direction: column;
+    }
+    .exams-wrapper > li:nth-of-type(2n-1),
+    .exams-wrapper > li:nth-of-type(2n) {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .inline-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .article-main img {
+        margin-bottom: 0.666rem;
+        width: 100%;
+    }
+    article img {
+        margin-bottom: 0.666rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 319px) {
+    .inline-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
